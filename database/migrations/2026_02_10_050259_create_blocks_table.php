@@ -9,27 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    // public function up(): void
-    // {
-    //     Schema::create('blocks', function (Blueprint $table) {
-    //         $table->id();
-    //         $table->int('page_id')
-
-    //         $table->timestamps();
-    //     });
-    // }
-
-    // id
-    // page_id
-    // type        (text | image | mixed)
-    // title
-    // content     (TEXT)
-    // image_path  (nullable)
-    // order
-    // is_active
-    // created_at
-    // updated_at
-
+    public function up(): void
+    {
+        Schema::create('blocks', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('page_id')->constrained()->cascadeOnDelete();
+            $table->unsignedInteger('sort_order')->default(0);
+            $table->string('title');
+            $table->text('content')->nullable();
+            $table->string('image_path')->nullable();
+            $table->boolean('is_active')->default(true);
+            $table->timestamps();
+        });
+    }
     /**
      * Reverse the migrations.
      */

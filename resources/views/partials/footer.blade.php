@@ -22,11 +22,20 @@
     <!-- Socials -->
     <div>
       <h3 class="font-semibold mb-3">Follow us</h3>
-      <div class="flex gap-4">
-        <a href="#" aria-label="Instagram">📷</a>
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="LinkedIn">💼</a>
-      </div>
+         <div class="flex gap-4 text-2xl" >
+      <a href="#" aria-label="Instagram">
+       <i class="fa fa-instagram"></i>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <i class="fa fa-youtube-play"></i>
+      </a>
+    </div>
     </div>
 
   </div>
